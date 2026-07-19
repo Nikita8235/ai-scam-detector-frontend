@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "ai-scam-detector-backend-production.up.railway.app",
+  baseURL: "https://ai-scam-detector-backend-production.up.railway.app/api",
   timeout: 10000,
 });
 
