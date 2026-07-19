@@ -1,0 +1,93 @@
+import { Routes, Route } from "react-router-dom";
+
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import TextDetection from "./pages/TextDetection";
+import History from "./pages/History";
+import Awareness from "./pages/Awareness";
+import URLDetection from "./pages/URLDetection";
+import ImageDetection from "./pages/ImageDetection";
+import VoiceDetection from "./pages/VoiceDetection";
+import ProtectedRoute from "./components/ProtectedRoute";
+
+function App() {
+
+  return (
+
+    <Routes>
+
+      <Route path="/" element={<Login />} />
+
+      <Route path="/login" element={<Login />} />
+
+      <Route path="/register" element={<Register />} />
+
+
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+
+
+      <Route
+        path="/text-detection"
+        element={
+          <ProtectedRoute>
+            <TextDetection />
+          </ProtectedRoute>
+        }
+      />
+
+
+      <Route
+        path="/url-detection"
+        element={
+          <ProtectedRoute>
+            <URLDetection />
+          </ProtectedRoute>
+        }
+      />
+
+
+      <Route
+        path="/image-detection"
+        element={
+          <ProtectedRoute>
+            <ImageDetection />
+          </ProtectedRoute>
+        }
+      />
+
+
+      <Route
+        path="/voice-detection"
+        element={
+          <ProtectedRoute>
+            <VoiceDetection />
+          </ProtectedRoute>
+        }
+      />
+
+
+      <Route
+        path="/awareness"
+        element={
+          <ProtectedRoute>
+            <Awareness />
+          </ProtectedRoute>
+        }
+      />
+
+    </Routes>
+
+  );
+
+}
+
+
+export default App;
