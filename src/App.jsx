@@ -6,7 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import TextDetection from "./pages/TextDetection";
 import History from "./pages/History";
 import Awareness from "./pages/Awareness";
-import URLDetection from "./pages/URLDetection";
+import UrlDetection from "./pages/UrlDetection";
 import ImageDetection from "./pages/ImageDetection";
 import VoiceDetection from "./pages/VoiceDetection";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -44,14 +44,14 @@ function App() {
       />
 
 
-      <Route
-        path="/url-detection"
-        element={
-          <ProtectedRoute>
-            <URLDetection />
-          </ProtectedRoute>
-        }
-      />
+     <Route
+  path="/url-detection"
+  element={
+    <ProtectedRoute>
+      <UrlDetection />
+    </ProtectedRoute>
+  }
+/>
 
 
       <Route
