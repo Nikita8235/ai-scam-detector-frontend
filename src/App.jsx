@@ -83,6 +83,15 @@ function App() {
         }
       />
 
+      <Route
+  path="/history"
+  element={
+    <ProtectedRoute>
+      <History />
+    </ProtectedRoute>
+  }
+/>
+
     </Routes>
 
   );
